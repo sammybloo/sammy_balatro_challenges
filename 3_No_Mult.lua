@@ -21,7 +21,8 @@ local function INIT()
         id = 'c_mod_no_mult',
         rules = {
             custom = {{id = 'no_mult'},},
-            modifiers = {}
+            modifiers = {
+            }
         },
         jokers = {},
         consumeables = {},
@@ -182,10 +183,10 @@ end
 local poll_edition_ref = poll_edition
 function poll_edition(_key, _mod, _no_neg, _guaranteed)
     local result = poll_edition_ref(_key, _mod, _no_neg, _guaranteed)
-    if G.GAME.modifiers.no_mult == true and result and result.polychrome then
+    if G.GAME.modifiers.no_mult == true and result and result == "e_polychrome" then
         result = nil
     end
-    if G.GAME.modifiers.no_mult == true and result and result.holo then
+    if G.GAME.modifiers.no_mult == true and result and result == "e_holo" then
         result = nil
     end
     return result

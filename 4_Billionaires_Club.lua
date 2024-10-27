@@ -59,7 +59,7 @@ function get_blind_amount(ante)
         local a, b, c, d = amounts[8], 1.6, ante - 8, 1 + 0.2 * (ante - 8)
         local amount = math.floor(a * (b + (k * c) ^ d) ^ c)
         amount = amount - amount % (10 ^ math.floor(math.log10(amount) - 1))
-        return TalismanCompat(amount)
+        return amount
     end
     return get_blind_amount_ref(ante)
 end
