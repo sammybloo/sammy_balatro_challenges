@@ -2,7 +2,7 @@
 --- MOD_NAME: Serialised
 --- MOD_ID: Serialised
 --- MOD_AUTHOR: [SammyBloo]
---- MOD_DESCRIPTION: Hands will not score if you have more than one joker of a certain rarity. 
+--- MOD_DESCRIPTION: Only 1 Joker of each rarity will be active. 
 --- PRIORITY: 101
 ----------------------------------------------
 ------------MOD CODE -------------------------
@@ -12,7 +12,7 @@ SMODS.current_mod = SMODS.current_mod or {}
 function SMODS.current_mod.process_loc_text()
     G.localization.misc.challenge_names.c_mod_serialised = "Serialised"
     G.localization.misc.v_text.ch_c_unique_rarity =
-        {"Hands will not score if you have\nmultiple jokers with the same rarity"}
+        {"Only 1 Joker of each rarity will be enabled"}
 end
 
 -- G.handlist
